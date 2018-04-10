@@ -5,6 +5,9 @@ const client = new Discord.Client();
 const prefix = "!";
 
 client.login(process.env.token);
+client.on("ready", () => {
+    console.log('bot prêt');
+} );
 
 client.on('message', message => {
     const args = msg.content.slice(prefix.length).trim().split(/ +/g);
