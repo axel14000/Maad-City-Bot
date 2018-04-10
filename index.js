@@ -1,4 +1,4 @@
-const Discord = require('Discord.js');
+const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
@@ -22,4 +22,3 @@ client.on('message', message => {
         console.log('le bot donne le lien du vote');
     }
 });
-
