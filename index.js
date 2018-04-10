@@ -30,8 +30,6 @@ client.on('message', async message => {
         const deleteCount = parseInt(args[0], 10);
         if (!deleteCount || deleteCount < 2 || deleteCount > 100)
             return message.reply("Merci de donner un nombre de 2 à 100 messages à supprimer.");
-
-        // So we get our messages, and delete them. Simple enough, right?
         const fetched = await message.channel.fetchMessages({
             limit: deleteCount
         });
