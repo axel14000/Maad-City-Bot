@@ -22,7 +22,7 @@ client.on('message', async message => {
         console.log('le bot remerci et donne le lien du vote');
     }
 
-    if (message.content.startWitch("bonne nuit") || message.content.startsWith('bonne nuit')) {
+    if (message.content.startWitch("bonne nuit") || message.content.startsWith("Bonne nuit")) {
         message.reply("bonne nuit à toi aussi moi je fais nuit blanche tous les jours xD");
         console.log('le bot dit bonne nuit en se la vantant')
     }
