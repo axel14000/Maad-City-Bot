@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 var prefix = "!";
 
-client.login("NDMzMDI2Mzc4MTA0MDQ1NTg4.Da5meQ.3uahIbm5hND3vFz2GFcAshyRyZw");
+client.login(process.env.token);
 
 client.on('message', message => {
     if(message.content === "Bonjour"){
