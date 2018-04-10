@@ -18,8 +18,13 @@ client.on('message', async message => {
     }
 
     if (message.content.startsWith("oui et toi")) {
-        message.reply("je te remercie je vais toujour bien, tu peut allez voté sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
+        message.reply("je te remercie je vais toujours bien, tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
         console.log('le bot remerci et donne le lien du vote');
+    }
+
+    if (message.content.startWitch("bonne nuit")) {
+        message.reply("bonne nuit à toi aussi moi je fais nuit blanche tous les jours xD");
+        console.log('le bot dit bonne nuit en se la vantant')
     }
 
     if (command === "vote") {
