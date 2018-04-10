@@ -2,12 +2,14 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-var prefix = "!";
+const prefix = "!";
 
 client.login(process.env.token);
 
 client.on('message', message => {
-    if(message.content === "Bonjour"){
+    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    if(message.content.startsWith("Bonjour") || message.content.startsWith("Bonjour")){
         message.reply("salut, comment ça va?");
         console.log('le bot dit bonjour et demande comment ça va?');
     }
@@ -17,7 +19,7 @@ client.on('message', message => {
         console.log('le bot remerci et donne le lien du vote');
 }
 
-    if(message.content === "!vote"){
+    if(command === "vote"){
         message.reply("@everyone Goo voteerrrr :heart: https://gta.top-serveurs.net/maad-city-rp");
         console.log('le bot donne le lien du vote');
     }
