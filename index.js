@@ -8,6 +8,7 @@ client.login(process.env.token);
 client.on("ready", () => {
     console.log('bot prêt et opérationel');
     client.user.setGame("Maad City");
+
 });
 
 client.on('message', async message => {
@@ -31,6 +32,21 @@ client.on('message', async message => {
         console.log('le bot dit bonne nuit en se la vantant')
     }
 
+    if (message.content === prefix + "aide"){
+        var help_embd = new Discord.RichEmbed()
+        .setColor("#FF00CC")
+        .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
+        .setDescription("je suis le bot du discord.")
+        .setField("!aide", "affiche les intéractions du bot")
+        .addField("!serveur", "affiche la description du serveur avec le nombre de place etc...")
+        .addField("!vote", "donne le lien pour voté pour le serveur")
+        .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
+        .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
+        .setFooter("Menu d'aide")
+        message.channel.sendMessage(help_embed)
+        console.log("un utilisateur a demandé de l'aide")
+    }
+    
     if (command === "serveur") {
         message.reply("le serveur se nomme **Maad City** et à 32 place de jeux.");
         consle.log('le bot donne toute les info du serveur');
