@@ -27,7 +27,7 @@ client.on('message', async message => {
         console.log('le bot remerci et donne le lien du vote');
     }
     if (message.content.startsWith("non et toi") ||message.content.startsWith("Non et toi") || message.content.startsWith("bof et toi") || message.content.startsWith("Bof et toi")) {
-        message.reply("ah merde!! moi je vais bien merci. tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
+        message.reply("ah merde!! moi je vais bien merci. tu peux aller voter sur http://urlz.fr/6T3W ainsi que vous @everyone :heart:");
         console.log('le bot dit bonjour');
     }
     if (message.content.startsWith("bonne nuit") || message.content.startsWith("Bonne nuit")) {
