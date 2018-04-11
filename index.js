@@ -36,7 +36,7 @@ client.on('message', async message => {
         message.reply("@everyone Goo voteerrrr :heart: https://gta.top-serveurs.net/maad-city-rp");
         console.log('le bot donne le lien du vote');
     }
-    if (command === 'purge') {
+    if (command === 'clear') {
         const deleteCount = parseInt(args[0], 10);
         if (!deleteCount || deleteCount < 2 || deleteCount > 100)
             return message.reply("Merci de donner un nombre de 2 à 100 messages à supprimer.");
