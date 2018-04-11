@@ -26,7 +26,10 @@ client.on('message', async message => {
         message.reply("je te remercie je vais toujours bien, tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
         console.log('le bot remerci et donne le lien du vote');
     }
-
+    if (message.content.startsWith === "non et toi"){
+        message.reply("ah merde!! moi je vais bien merci. tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
+        console.log('le bot dit bonjour');
+    }
     if (message.content.startsWith("bonne nuit") || message.content.startsWith("Bonne nuit")) {
         message.reply("bonne nuit à toi aussi moi je fais nuit blanche tous les jours xD");
         console.log('le bot dit bonne nuit en se la vantant')
