@@ -36,7 +36,7 @@ client.on('message', async message => {
     }
 
     if (command === "vote") {
-        message.reply("@everyone Goo voteerrrr :heart: https://gta.top-serveurs.net/maad-city-rp");
+        message.channel.send("@everyone Goo voteerrrr :heart: https://gta.top-serveurs.net/maad-city-rp");
         console.log('le bot donne le lien du vote');
     }
     if (command === 'clear') {
