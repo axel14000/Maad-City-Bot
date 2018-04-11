@@ -43,7 +43,7 @@ client.on('message', async message => {
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
         .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
         .setFooter("Menu d'aide")
-        message.channel.sendMessage(help_embed);
+        message.channel.send({embed: help_embed});
         console.log("un utilisateur a demandé de l'aide")
     }
 
