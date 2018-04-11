@@ -6,7 +6,7 @@ const prefix = "!";
 
 client.login(process.env.token);
 client.on("ready", () => {
-    console.log('bot prêt');
+    console.log('bot prêt et opérationel');
 });
 
 client.on('message', async message => {
