@@ -17,6 +17,11 @@ client.on('message', async message => {
         console.log('le bot dit bonjour et demande comment ça va?');
     }
 
+    if (command === "serveur") {
+        message.reply("le serveur se nomme **Maad City** et à 32 place de jeux.");
+        consle.log('le bot donne toute les info du serveur');
+    }
+
     if (message.content.startsWith("oui et toi")) {
         message.reply("je te remercie je vais toujours bien, tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
         console.log('le bot remerci et donne le lien du vote');
