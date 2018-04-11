@@ -12,7 +12,7 @@ client.on("ready", () => {
 client.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour")) {
+    if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
         message.reply("salut, comment ça va?");
         console.log('le bot dit bonjour et demande comment ça va?');
     }
