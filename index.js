@@ -22,7 +22,7 @@ client.on('message', async message => {
         consle.log('le bot donne toute les info du serveur');
     }
 
-    if (message.content.startsWith("oui et toi") || message.content.startsWith("Oui et toi")) {
+    if (message.content.startsWith("oui et toi") || message.content.startsWith("Oui et toi") || message.content.startsWith("Bien et toi") || message.content.startsWith("bien et toi")) {
         message.reply("je te remercie je vais toujours bien, tu peux aller voter sur https://gta.top-serveurs.net/maad-city-rp ainsi que vous @everyone :heart:");
         console.log('le bot remerci et donne le lien du vote');
     }
