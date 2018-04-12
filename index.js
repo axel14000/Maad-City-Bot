@@ -33,7 +33,7 @@ client.on('message', async message => {
     }
 
     if (message.content === prefix + "aide"){
-        var help_embd = new Discord.RichEmbed()
+        var help_embed = new Discord.RichEmbed()
         .setColor("#FF00CC")
         .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
         .setDescription("je suis le bot du discord.")
