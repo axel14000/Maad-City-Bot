@@ -67,21 +67,4 @@ client.on('message', async message => {
             .catch(error => message.reply(`Erreur: ${error}`));
     }
 
-    if (!message.content.starsWitch(prefix)) return;
-    var args = message.content.substring(prefix.length).split(" ");
-    switch (args[0].toLocaleLowerCase()) {
-        case "statistique" :
-        var userCreateDate = message.author.createdAt.toString().split(" ");
-        var msgauthor = message.author.id;
-        var stats_embed = new Discord.RicheEmbed()
-        .setcolor("#FCDC12")
-        .setTitle(`statistique de l'utilisateur : ${message.author.username}`)
-        .addField(`Id de l'utilisateur :ID:`, msgauthor, true)
-        .addfield("Date de création de l'utilisateur:", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
-        .setThumbail(message.author.avatarURL)
-        message.reply("Tu peut regarder tes message privé ! tu vient de recevoir tes statistique !")
-        message.author.send({embed: stats_embed});
-        break;
-    }
-
 });
