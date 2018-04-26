@@ -32,12 +32,12 @@ client.on('message', async message => {
         console.log('le bot dit bonne nuit en se la vantant')
     }
 
-    if (message.content === prefix + "aide"){
+    if(message.content === prefix + "aide"){
         var help_embed = new Discord.RichEmbed()
-        .setColor("#FF00CC")
+        .setColor("#40A497")
         .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
         .setDescription("je suis le bot du discord.")
-        .setField("!aide", "affiche les intéractions du bot")
+        .addField("!aide", "affiche les intéractions du bot")
         .addField("!serveur", "affiche la description du serveur avec le nombre de place etc...")
         .addField("!vote", "donne le lien pour voté pour le serveur")
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
