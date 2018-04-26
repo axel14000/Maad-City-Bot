@@ -14,6 +14,16 @@ client.on("ready", () => {
 client.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
+
+    client.on("guildMemberAdd", function(member) {
+        member.guild.channels.find("name", "arrivé-et-depar").sendMessage(" Bienvenue sur mon serveur " + member.toString());
+        member.addRole(member.guild.roles.find("name", "Test"));
+    });
+    
+    client.on("guildMemberRemove", function(member) {
+        member.guild.channels.find("name", "arrivé-et-depar").sendMessage( member.toString() + "Nous a quitté ! ");
+    });
+
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
         message.reply("salut, comment ça va?");
         console.log('le bot dit bonjour et demande comment ça va?');
