@@ -40,6 +40,7 @@ client.on('message', async message => {
         .addField("!aide", "affiche les intéractions du bot")
         .addField("!serveur", "affiche la description du serveur avec le nombre de place etc...")
         .addField("!vote", "donne le lien pour voté pour le serveur")
+        .addField("!info", "vous donne des infos sur le bot ainsi que le discord")
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
         .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
         .setFooter("Menu d'aide")
