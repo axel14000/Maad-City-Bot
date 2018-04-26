@@ -52,7 +52,7 @@ client.on('message', async message => {
         .setColor("#40A497")
         .setTitle("voici les information sur moi et le serveur !")
         .addField(" :robot: Nom", `${client.user.tag}`, true)
-        .addField("Descriminateur du bot :Hash:", `#${client.user.discrimanator}`)
+        .addField("Descriminateur du bot :hash:", `#${client.user.discrimanator}`)
         .addField("ID :id: ", `${client.user.id}`)
         .addField("Nombre de membres", message.guild.members.size)
         .addField("Nombre de catégories et de salon", message.guild.channels.size)
