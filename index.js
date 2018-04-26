@@ -33,7 +33,7 @@ client.on('message', async message => {
     }
 
     if(message.content === prefix + "aide"){
-        var help_embed = new Discord.RichEmbed()
+        var aide_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
         .setDescription("je suis le bot du discord.")
@@ -43,7 +43,7 @@ client.on('message', async message => {
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
         .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
         .setFooter("Menu d'aide")
-        message.channel.sendMessage(help_embed);
+        message.channel.sendMessage(aide_embed);
         console.log("un utilisateur a demandé de l'aide")
     }
 
