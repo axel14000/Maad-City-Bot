@@ -47,6 +47,20 @@ client.on('message', async message => {
         console.log("un utilisateur a demandé de l'aide")
     }
 
+    if(message.content === prefix + "info"){
+        var info_embed = new Discord.RichEmbed()
+        .setColor("#40A497")
+        .setTitle("voici les information sur moi et le serveur !")
+        .addField(" :robot: Nom", `${client.user.tag}`, true)
+        .addField("Descriminateur du bot :Hash:", `#${client.user.discrimanator}`)
+        .addField("ID :id: ", `${client.user.id}`)
+        .addField("Nombre de membres", message.guild.members.size)
+        .addField("Nombre de catégories et de salon", message.guild.channels.size)
+        .setFooter("Infos - Discord")
+        message.channel.sendMessage(info_embed)
+        console.log("Un utilisateur vien de demandé des Infos")
+    }
+
     if (command === "serveur") {
         message.reply("le serveur se nomme **Maad City** et à 32 place de jeux.");
         consle.log('le bot donne toute les info du serveur');
