@@ -7,7 +7,7 @@ const prefix = "!";
 client.login(process.env.token);
 client.on("ready", () => {
     console.log('bot prêt et opérationel');
-    client.user.setGame("Maad City");
+    client.user.setGame("!aide");
 
 });
 
