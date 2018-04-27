@@ -15,14 +15,13 @@ client.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    client.on("guildMemberAdd", function(member) {
-        member.guild.channels.find("name", "général").sendMessage(" Bienvenue sur mon serveur " + member.toString());
-        member.addRole(member.guild.roles.find("name", "Test"));
-    });
-    
-    client.on("guildMemberRemove", function(member) {
-        member.guild.channels.find("name", "général").sendMessage( member.toString() + "Nous a quitté ! ");
-    });
+    client.on("guildMemberAdd", member =>{
+        member.guild.channels.find("name", "général").send(`:grinning: ${member.user.username} vien de rejoindre le serveur`)
+    })
+
+    client.on("guildMemberRemove", member =>{
+        member.guild.channels.find("name", "général").send(`:ski: ${member.user.username} vien de quitté la famille.`)
+    })
 
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
         message.reply("salut, comment ça va?");
