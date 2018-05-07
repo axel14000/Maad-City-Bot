@@ -16,11 +16,11 @@ client.on('message', async message => {
     const command = args.shift().toLowerCase();
 
     client.on("guildMemberAdd", member =>{
-        member.guild.channels.find("name", "général").send(`:grinning: ${member.user.username} vien de rejoindre le serveur`)
+        member.guild.channels.find("name", "arrivée-et-départ").send(`:grinning: ${member.user.username} vien de rejoindre le serveur`)
     })
 
     client.on("guildMemberRemove", member =>{
-        member.guild.channels.find("name", "général").send(`:ski: ${member.user.username} vien de quitté la famille.`)
+        member.guild.channels.find("name", "arrivée-et-départ").send(`:ski: ${member.user.username} vien de quitté la famille.`)
     })
 
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
