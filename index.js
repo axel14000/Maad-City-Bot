@@ -47,8 +47,6 @@ client.on('message', async message => {
         .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
         .setDescription("je suis le bot du discord.")
         .addField("!aide", "affiche les intéractions du bot")
-        .addField("!serveur", "affiche la description du serveur avec le nombre de place etc...")
-        .addField("!vote", "donne le lien pour voté pour le serveur")
         .addField("!info", "vous donne des infos sur le bot ainsi que le discord")
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
         .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
@@ -71,15 +69,6 @@ client.on('message', async message => {
         console.log("Un utilisateur vien de demandé des Infos")
     }
 
-    if (command === "serveur") {
-        message.reply("le serveur se nomme **Maad City** et à 32 place de jeux.");
-        consle.log('le bot donne toute les info du serveur');
-    }
-
-    if (command === "vote") {
-        message.channel.send("@everyone Goo voteerrrr :heart: https://gta.top-serveurs.net/maad-city-rp");
-        console.log('le bot donne le lien du vote');
-    }
     if (command === 'clear') {
         const deleteCount = parseInt(args[0], 10);
         if (!deleteCount || deleteCount < 2 || deleteCount > 1000)
