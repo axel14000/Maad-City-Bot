@@ -15,13 +15,14 @@ client.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    client.on("guildMemberAdd", member =>{
-        member.guild.channels.find("name", "arrivée-et-départ").send(`:grinning: ${member.user.username} vien de rejoindre le serveur`)
-    })
-
-    client.on("guildMemberRemove", member =>{
-        member.guild.channels.find("name", "arrivée-et-départ").send(`:ski: ${member.user.username} vien de quitté la famille.`)
-    })
+    client.on("guildMemberAdd", function(member) {
+        member.guild.channels.find("name", "Général").sendMessage(" Bienvenue sur mon serveur " + member.toString());
+        member.addRole(member.guild.roles.find("name", "test"));
+    });
+    
+    client.on("guildMemberRemove", function(member) {
+        member.guild.channels.find("name", "Général").sendMessage( member.toString() + "Nous a quitté ! ");
+    });
 
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
         message.reply("salut, comment ça va?");
@@ -81,3 +82,4 @@ client.on('message', async message => {
     }
 
 });
+
