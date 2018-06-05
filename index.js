@@ -16,12 +16,12 @@ client.on('message', async message => {
     const command = args.shift().toLowerCase();
 
     client.on("guildMemberAdd", function(member) {
-        member.guild.channels.find("name", "Général").sendMessage(" Bienvenue sur mon serveur " + member.toString());
-        member.addRole(member.guild.roles.find("name", "test"));
+        member.guild.channels.find("name", "arrivée-et-départ").sendMessage(" Bienvenue sur mon serveur " + member.toString());
+        member.addRole(member.guild.roles.find("name", "Test"));
     });
     
     client.on("guildMemberRemove", function(member) {
-        member.guild.channels.find("name", "Général").sendMessage( member.toString() + "Nous a quitté ! ");
+        member.guild.channels.find("name", "arrivée-et-départ").sendMessage( member.toString() + "Nous a quitté ! ");
     });
 
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
