@@ -25,7 +25,7 @@ client.on('message', async message => {
     });
 
     if (message.content.startsWith("Bonjour") || message.content.startsWith("bonjour") ||message.content.startsWith("Salut") || message.content.startsWith("salut") ){
-        message.reply("salut, comment ça va?");
+        message.reply("Bonjour");
         console.log('le bot dit bonjour et demande comment ça va?');
     }
 
@@ -42,12 +42,12 @@ client.on('message', async message => {
         console.log('le bot dit bonne nuit en se la vantant')
     }
 
-    if(message.content === prefix + "aide"){
+    if(message.content === prefix + "help"){
         var aide_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Voici les commandes d'aide et différent amusement grace au bot!")
         .setDescription("je suis le bot du discord.")
-        .addField("!aide", "affiche les intéractions du bot")
+        .addField("!help", "affiche les intéractions du bot")
         .addField("!info", "vous donne des infos sur le bot ainsi que le discord")
         .addField("!clear", "commande pour clear le chat (seulement pour les membre munit de la permission n'éssaire)")
         .addField("Bonjour", "entame une discusion avec le bot qui peut se continuer...")
